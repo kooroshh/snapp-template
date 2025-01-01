@@ -100,7 +100,6 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
-    background-color: red;
     min-height: 40vh;
     transform: rotateY(180deg);
 }
