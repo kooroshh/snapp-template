@@ -4,9 +4,6 @@ html{
     font-size: 15px;
 }
 
-body{
-    background-color: red;
-}
 
 
 
@@ -78,7 +75,35 @@ body{
 
 .navbar__links li{
     margin-right: 2.2rem;
-    font-weight: 200;
+    font-weight: 300;
 }
+
+
+/* 
+ * Hero Section
+*/
+
+
+.hero-section{
+    display: flex;
+}
+
+.hero-section__intro{
+    background-color: #21aa58;
+    color: white;
+    width: 50%;
+}
+
+.hero-section__pic{
+    background-image: url("./static/img/intro_pic.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    background-color: red;
+    min-height: 40vh;
+    transform: rotateY(180deg);
+}
+
 
 

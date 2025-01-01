@@ -4,7 +4,7 @@
     font-style: normal;
     font-weight: 100;
     src: url('static/fonts/woff/IRANSansX-Thin.woff') format('woff'),
-    url('static/fonts/woff2/IRANSansX-Thin.woff2') format('woff2');
+    url('static/fonts/woff2/IRANSansX-Thin.woff2') format('woff2'); 
 }
 
 @font-face {
