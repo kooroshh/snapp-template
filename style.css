@@ -207,4 +207,20 @@ button{
 
 
 
+/* 
+ * Snapp Apps Links
+*/
+
+
+
+.snap-apps-links{
+    min-height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: space-evenly;
+    align-items: center;
+    content-visibility: auto;
+    padding: 0 5rem;
+}
+
 
