@@ -4,6 +4,10 @@ html{
     font-size: 100%;
 }
 
+p{
+    line-height: 1.7;
+}
+
 button{
     font-family: inherit;
     cursor: pointer;
@@ -20,13 +24,10 @@ button{
 
 .container{
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.navbar .container{
-    padding-right: 12%;
-    padding-left: 12%;
+    margin: auto;
+    padding-right: 7%;
+    padding-left: 7%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 575.98px){
@@ -237,7 +238,7 @@ button{
 
 .intro-of-snapp-apps{
     background-color: #f2f5f8;
-
+    padding-bottom: 3rem;
     color: #333;
 }
 
@@ -245,7 +246,7 @@ button{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    padding: 2rem 10rem;
+    padding: 1rem;
 }
 
 .intro-of-snapp-apps_items > a{
@@ -286,6 +287,67 @@ button{
 }
 
 
+/* 
+ * Snapp For All Needs
+*/
+
+.snapp-for-all-needs{
+    margin: 5rem 0;
+    display: flex;
+    width: 100%;
+}
+
+.snapp-for-all-needs__pic{
+    background-image: url("./static/img/super-app.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    flex: 0 0 50%;
+    height: 50vh;
+    min-height: 28.125rem;
+}
+
+.snapp-for-all-needs__intro{
+    padding: 2rem;
+    padding-left: 15%;
+    color: rgb(64, 64, 64);
+
+}
+
+.snapp-for-all-needs__intro h2{
+    font-size: 1.3825rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    line-height: 1.7;
+    font-weight: 700;
+    color: inherit;
+}
+
+.snapp-for-all-needs__intro p{
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    font-weight: 300;
+}
 
 
+/* 
+ * Snapp Benefits
+*/
+
+.snapp-benefits__items{
+    /* padding: 5rem; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+    padding: 0 6rem;
+}
+
+.snapp-benefits__item_cover{
+    background-color: #f2f5f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.125rem;
+}
 
