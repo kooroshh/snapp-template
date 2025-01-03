@@ -6,6 +6,7 @@ html{
 
 button{
     font-family: inherit;
+    cursor: pointer;
 }
 
 
@@ -21,6 +22,9 @@ button{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.navbar .container{
     padding-right: 12%;
     padding-left: 12%;
 }
@@ -164,7 +168,6 @@ button{
 
 .hero-section__intro_sendlink_input input::placeholder{
     color: rgba(191, 230, 207,1);
-
 }
 
 .hero-section__intro_sendlink_input .input_dot{
@@ -175,6 +178,9 @@ button{
     margin-left: 0.5rem;
 }
 
+.hero-section__intro a{
+    width: fit-content;
+}
 
 .hero-section__intro_gotowebapp{
     background-color: transparent;
@@ -187,6 +193,7 @@ button{
     line-height: 1;
     padding: 0 1.5rem;
     border-radius: 0.375rem;
+    width: fit-content;
 }
 
 .hero-section__intro_gotowebapp:hover{
@@ -222,5 +229,63 @@ button{
     content-visibility: auto;
     padding: 0 5rem;
 }
+
+
+/* 
+ * Intro Of Snapp
+*/
+
+.intro-of-snapp-apps{
+    background-color: #f2f5f8;
+
+    color: #333;
+}
+
+.intro-of-snapp-apps_items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 2rem 10rem;
+}
+
+.intro-of-snapp-apps_items > a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.intro-of-snapp-apps_title{
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+
+.intro-of-snapp-apps_item{
+    background-color: #fff;
+    border-radius: 1.125rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.intro-of-snapp-apps_item_info{
+    margin-right: 0.5rem;
+    padding: 1rem 0;
+}
+
+.intro-of-snapp-apps_item_info h3{
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.intro-of-snapp-apps_item_info p{
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+
 
 
