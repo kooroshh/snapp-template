@@ -25,12 +25,7 @@ button{
 
 
 
-.navbar{
-    height: 5.5rem;
-    background-color: white;
-    display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
+
 
 .container{
     width: 100%;
@@ -82,6 +77,17 @@ button{
     }
 }
 
+.navbar{
+    height: 5.5rem;
+    background-color: white;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color:  rgb(63, 63, 63);
+    /* position: fixed;
+    width: 100%;
+    z-index: 100; */
+}
+
 .navbar__section{
     display: flex;
     height: 100%;
@@ -93,13 +99,61 @@ button{
 }
 
 
-.navbar__section .navbar__links{
+.navbar__links{
     display: flex;
 }
 
-.navbar__links li{
+.navbar__links > li{
+    position: relative;
     margin-right: 2.2rem;
+    display: flex;
     font-weight: 300;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar__links > li > a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar__links > li > div.nav-icon{
+    margin-right: .5rem;
+    opacity: .7;
+    transform: scale(.6) rotate(90deg);
+}
+
+.navbar__links > li:hover .navbar__links-menu{
+    display: block;
+}
+
+.navbar__links-menu{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    border-radius: 0.75rem;
+    z-index: 10000;
+    top: 3rem;
+    right: -2rem;
+}
+
+.navbar__links-menu > li{
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    font-weight: 300;
+}
+
+.navbar__links-menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar__links-menu a:hover{
+    color: #00d170;
+    font-weight: 700;
+
 }
 
 
