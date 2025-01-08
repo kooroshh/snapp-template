@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./static/img/favicon.ico">
     <title>Snapp</title>
+    <link rel="stylesheet" href="./static/css/keen-slider.min.css" />
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -350,7 +351,33 @@
         </div>
     </div>
 
+    <div class="snapp-slider-section">
+        <div class="container">
+            <div class="snapp-slider-wrapper">
+                <div id="snapp_slider" class="keen-slider">
 
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="./static/img/slider/Market.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="./static/img/slider/Food.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="./static/img/slider/Driver.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="snapp-for-all-needs">
@@ -628,6 +655,10 @@
     </div>
 
 
+    <script src="./static/js/keen-slider.js"></script>
+    <script>
+        var slider = new KeenSlider("#snapp_slider");
+    </script>
 </body>
 
 </html>
