@@ -92,12 +92,6 @@ button{
     }
 }
 
-@media (min-width: 1600px){
-    .container{
-        max-width: 1640px;
-    }
-}
-
 .navbar{
     height: 5.5rem;
     background-color: white;
@@ -461,7 +455,7 @@ button{
 
 .driver-registration{
     background-color: var(--background-primary);
-    padding: 10rem;
+    padding: 2.5rem;
     text-align: center;
 }
 
@@ -484,13 +478,47 @@ button{
 
 
 
-.driver-registration__video{
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin: 2.5rem 0;
-}
-
 .driver-registration__video video{
     width: 100%;
     height: 100%;
+    margin: 2.5rem 0;
+    border-radius: 0.7rem;
 }
+
+.driver-registration__benefits{
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 2rem;
+    column-gap: 1rem;
+}
+
+.driver-registration__benefits_item{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.benefits_item_info h4{
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.benefits_item_info p{
+    font-size: var(--text-sm);
+}
+
+
+
+
+
+
+
+
+
