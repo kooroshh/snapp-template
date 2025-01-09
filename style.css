@@ -116,6 +116,11 @@ button{
     display: flex;
     height: 100%;
     align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__menu_icon{
+    display: block;
 }
 
 .navbar__section .navbar__logo img{
@@ -124,7 +129,8 @@ button{
 
 
 .navbar__links{
-    display: flex;
+    display: none;
+    white-space: nowrap;
 }
 
 .navbar__links > li{
@@ -177,6 +183,22 @@ button{
 .navbar__links-menu a:hover{
     color: #00d170;
     font-weight: 700;
+
+}
+
+@media only screen and (min-width: 992px){
+
+    .navbar__menu_icon{
+        display: none;
+    }
+
+    .navbar__links{
+        display: flex;
+    }
+
+    .navbar__section{
+        justify-content: flex-start;
+    }
 
 }
 
@@ -698,7 +720,7 @@ button{
 
 .driver-registration{
     background-color: var(--background-primary);
-    padding: 2.5rem;
+    padding: 2.5rem 0;
     text-align: center;
     margin-top: 2.5rem;
 }
@@ -706,12 +728,13 @@ button{
 .driver-registration__title{
     font-size: var(--text-3xl);
     font-weight: bold;
+    line-height: 3.25rem;
 }
 
 .driver-registration__description{
     padding: 1rem 0;
     font-weight: 300;
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
 }
 
 .driver-registration__btn{
@@ -732,7 +755,7 @@ button{
 .driver-registration__benefits{
     margin: 2.5rem 0;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     row-gap: 2rem;
     column-gap: 1rem;
 }
@@ -740,22 +763,54 @@ button{
 .driver-registration__benefits_item{
     background-color: white;
     border-radius: 1rem;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem;
     display: flex;
-    text-align: right;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-
+.benefits_item_icon img{
+    width: 80px;
+}
 
 .benefits_item_info h4{
     font-weight: bold;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    line-height: 1.7;
 }
 
 .benefits_item_info p{
     font-size: var(--text-sm);
+    font-weight: 300;
+}
+
+
+@media only screen and (min-width: 992px){
+
+    .driver-registration{
+        padding: 2.5rem;
+    }
+
+    .driver-registration__benefits{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .driver-registration__benefits_item{
+        flex-direction: row;
+        padding: 2.5rem 1.5rem;
+        text-align: right;
+    }
+
+    .benefits_item_icon img{
+        width: 120px;
+    }
+
+    .benefits_item_info h4{
+        padding: 1rem 0;
+    }
+
 }
 
 
@@ -771,11 +826,13 @@ button{
 .footer__links{
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .footer__links li{
     margin: 0.5rem 0;
+    margin-left: 1rem;
+    font-weight: 300;
 }
 
 
@@ -792,9 +849,11 @@ button{
 .footer__etemad{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer__etemad a{
     margin: 0.5rem 0;
 }
+
 
