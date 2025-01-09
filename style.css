@@ -365,6 +365,9 @@ button{
  * Snapp Apps Links
 */
 
+.snap-apps-links-section{
+    display: none;
+}
 
 
 .snap-apps-links{
@@ -374,9 +377,14 @@ button{
     justify-content: space-evenly;
     align-items: center;
     content-visibility: auto;
-    padding: 0 5rem;
 }
 
+@media only screen and (min-width: 992px){
+
+    .snap-apps-links-section{
+        display: block;
+    }
+}
 
 /* 
  * Intro Of Snapp
@@ -391,8 +399,12 @@ button{
 .intro-of-snapp-apps_items{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1rem;
+    align-items: stretch;
+}
+.intro-of-snapp-apps_item img{
+    width: 48px;
+    height: 48px;
 }
 
 .intro-of-snapp-apps_items > a{
@@ -401,7 +413,7 @@ button{
 }
 
 .intro-of-snapp-apps_title{
-    font-size: var(--text-3xl);
+    font-size: var(--text-lg);
     font-weight: 700;
     line-height: 3.25rem;
     padding: 2.5rem 0;
@@ -415,22 +427,64 @@ button{
     display: flex;
     align-items: center;
     padding: 0.5rem;
-}
-
-.intro-of-snapp-apps_item_info{
-    margin-right: 0.5rem;
-    padding: 1rem 0;
+    flex-direction: column;
+    height: 90%;
 }
 
 .intro-of-snapp-apps_item_info h3{
     margin: 0.5rem 0;
     font-weight: bold;
+    font-size: var(--text-sm);
+    text-align: center;
+    line-height: 1.5;
 }
 
 .intro-of-snapp-apps_item_info p{
     font-size: var(--text-sm);
     color: rgba(0, 0, 0, 0.6);
+    display: none;
 }
+
+
+@media only screen and (min-width: 992px){
+    
+    .intro-of-snapp-apps_items{
+        grid-template-columns: repeat(auto-fill, 20rem);
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .intro-of-snapp-apps_title{
+        font-size: var(--text-3xl);
+    }
+
+    .intro-of-snapp-apps_item{
+        flex-direction: row;
+        height: auto;
+    }
+
+    .intro-of-snapp-apps_item_info{
+        margin-right: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .intro-of-snapp-apps_item_info h3{
+        text-align: right;
+        font-size: var(--text-base);
+    }
+
+    .intro-of-snapp-apps_item_info p{
+        display: block;
+    }
+
+    .intro-of-snapp-apps_item img{
+        width: 62px;
+        height: 62px;
+    }
+    
+
+}
+
 
 /* 
  * Snapp Slider
