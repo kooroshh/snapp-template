@@ -354,6 +354,7 @@
     <div class="snapp-slider-section">
         <div class="container">
             <div class="snapp-slider-wrapper">
+
                 <div id="snapp_slider" class="keen-slider">
 
                     <div class="keen-slider__slide">
@@ -375,7 +376,17 @@
                     </div>
 
                 </div>
+
+                <div class="keen-dots-wrapper">
+                    <div class="keen-dots">
+                        <button type="button" class="dot active"></button>
+                        <button type="button" class="dot"></button>
+                        <button type="button" class="dot"></button>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 
@@ -657,8 +668,40 @@
 
     <script src="./static/js/keen-slider.js"></script>
     <script>
-        var slider = new KeenSlider("#snapp_slider");
-    </script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Initialize Keen Slider
+          var slider = new KeenSlider("#snapp_slider", {
+              loop: true,
+              created: function (instance) {
+                  // Add event listeners to the dots
+                  var dots = document.querySelectorAll(".keen-dots .dot");
+                  dots.forEach(function (dot, idx) {
+                      dot.addEventListener("click", function () {
+                          instance.moveToIdx(idx); // Correct method to move to the slide corresponding to the dot index
+                      });
+                  });
+
+                  // Update the active dot on slider creation
+                  updateActiveDot(instance);
+              },
+              slideChanged: function (instance) {
+                  // Update the active dot when the slide changes
+                  updateActiveDot(instance);
+              }
+          });
+
+          // Function to update the active dot
+          function updateActiveDot(instance) {
+              var dots = document.querySelectorAll(".keen-dots .dot");
+              dots.forEach(function (dot, idx) {
+                  dot.classList.remove("active");
+                  if (idx === instance.track.details.rel) {
+                      dot.classList.add("active");
+                  }
+              });
+          }
+      });
+  </script>
 </body>
 
 </html>
