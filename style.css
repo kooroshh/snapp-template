@@ -127,6 +127,84 @@ button{
     width: 90px;
 }
 
+.navbar__hide{
+    display: flex!important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: calc(100% - 5.6rem);
+    width: 100%;
+    max-width: 31.25rem;
+    background-color: white;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    gap: 1rem;
+}
+
+.navbar__hide > li{
+    margin-right: 1rem!important;
+}
+
+.navbar__hide .withDropDown{
+    justify-content: space-between;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__hide .withDropDown .nav-icon{
+    transform: scale(1.1) rotate(90deg);
+    font-weight: bold;
+    margin-left: 0.5rem;
+    color: black;
+}
+
+.navbar__hide .withDropDown .navbar__links-menu{
+    display: none;
+    width: 100%;
+    position: static;
+    border: none;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-radius: 0.75rem;
+}
+
+.menu__gapper{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.1rem 0;
+}
+
+#withDropDown3{
+    margin: 0!important;
+    padding: 0;
+}
+
+.navbar__links-menu_download{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-shadow{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 500000;
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.diffrent__cars{
+    color: #00d170;
+    font-size: var(--text-sm);
+}
 
 .navbar__links{
     display: none;
@@ -147,18 +225,38 @@ button{
     color: inherit;
 }
 
-.navbar__links > li > div.nav-icon{
+.navbar__links > li > div > div.nav-icon{
     margin-right: .5rem;
     opacity: .7;
     transform: scale(.6) rotate(90deg);
 }
 
-.navbar__links > li:hover .navbar__links-menu{
-    display: block;
+.nav-icon-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-icon-text.text-green, .nav-icon-text.text-green > .nav-icon svg{
+    color: #00d170;
+}
+
+.nav-icon-text.text-green{
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.dropdownBlock{
+    display: block!important;
+}
+.navbar__hide .withDropDown .dropdownBlock{
+    display: flex!important;
 }
 
 .navbar__links-menu{
     display: none;
+    width: 10.5rem;
     position: absolute;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -198,6 +296,10 @@ button{
 
     .navbar__section{
         justify-content: flex-start;
+    }
+
+    .diffrent__cars#withDropDown3, .diffrent__cars{
+        display: none;
     }
 
 }

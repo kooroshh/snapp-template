@@ -12,12 +12,12 @@
 </head>
 
 <body>
-
+    <div id="nav-shadow"></div>
     <nav class="navbar">
         <div class="container">
             <div class="navbar__section">
 
-                <div class="navbar__menu_icon">
+                <div class="navbar__menu_icon" id="nav-toggler">
                     <img alt="" src="./static/img/menu/menu_black_24dp.svg" size="24" loading="eager">
                 </div>
                 
@@ -26,21 +26,23 @@
                     <img src="./static/img/logo.svg" alt="snapp logo">
                 </div>
 
-                <ul class="navbar__links">
-                    <li>
-                        <span>سوپراپ اسنپ</span>
-                        <div class="nav-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M0 0h24v24H0z"></path>
-                                    <path
-                                        d="M8.293 4.707a1 1 0 011.414-1.414l8 8a1 1 0 010 1.414l-8 8a1 1 0 11-1.414-1.414L15.586 12 8.293 4.707z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </g>
-                            </svg>
+                <ul class="navbar__links" id="nav-visible">
+                    <li class="withDropDown" id="withDropDown1">
+                        <div class="nav-icon-text">
+                            <span>سوپراپ اسنپ</span>
+                            <div class="nav-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M8.293 4.707a1 1 0 011.414-1.414l8 8a1 1 0 010 1.414l-8 8a1 1 0 11-1.414-1.414L15.586 12 8.293 4.707z"
+                                            fill="currentColor" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
                         </div>
 
-                        <ul class="navbar__links-menu">
+                        <ul class="navbar__links-menu" id="dropdown1">
                             <li><a href="#">درخواست تاکسی</a></li>
                             <li><a href="#">پیک موتوری</a></li>
                             <li><a href="#">سفارش آنلاین غذا</a></li>
@@ -57,7 +59,7 @@
 
                     </li>
                     <li>
-                        <a href="#">ثبت نام راننده اسنپ</a>
+                        <a href="#">ثبت نام راننده اسنپ <span class="diffrent__cars"> (سواری، موتور و وانت) </span></a>
                     </li>
                     <li>
                         <a href="#">باشگاه رانندگان</a>
@@ -68,27 +70,83 @@
                     <li>
                         <a href="#">بلاگ</a>
                     </li>
-                    <li>
-                        <span>درباره اسنپ</span>
-                        <div class="nav-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M0 0h24v24H0z"></path>
-                                    <path
-                                        d="M8.293 4.707a1 1 0 011.414-1.414l8 8a1 1 0 010 1.414l-8 8a1 1 0 11-1.414-1.414L15.586 12 8.293 4.707z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </g>
-                            </svg>
+                    <li class="withDropDown"  id="withDropDown2">
+                        <div class="nav-icon-text">
+                            <span>درباره اسنپ</span>
+                            <div class="nav-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M8.293 4.707a1 1 0 011.414-1.414l8 8a1 1 0 010 1.414l-8 8a1 1 0 11-1.414-1.414L15.586 12 8.293 4.707z"
+                                            fill="currentColor" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
                         </div>
 
 
-                        <ul class="navbar__links-menu">
+                        <ul class="navbar__links-menu" id="dropdown2">
                             <li><a href="#">فرصت های شغلی</a></li>
                             <li><a href="#">درباره ما</a></li>
                             <li><a href="#">تماس با ما</a></li>
                         </ul>
 
                     </li>
+                    <div class="menu__gapper"></div>
+                    <li class="withDropDown diffrent__cars"  id="withDropDown3">
+                        <div class="nav-icon-text text-green">
+                            <span>اپلیکیشن اسنپ</span>
+                            <div class="nav-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M8.293 4.707a1 1 0 011.414-1.414l8 8a1 1 0 010 1.414l-8 8a1 1 0 11-1.414-1.414L15.586 12 8.293 4.707z"
+                                            fill="currentColor" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="navbar__links-menu" id="dropdown3">
+
+                            <li>
+                                <a href="#" class="navbar__links-menu_download">
+                                    <img src="./static/img/menu/directdownload-icon.png" alt="دانلود مستقیم" width="24" height="24">
+                                    دانلود مستقیم
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar__links-menu_download">
+                                    <img src="./static/img/menu/cafebazaar.png" alt="دانلود از کافه بازار" width="24" height="24">
+                                    دانلود از کافه بازار
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar__links-menu_download">
+                                    <img src="./static/img/menu/myketmarketicon.png" alt="دانلود از مایکت" width="24" height="24">
+                                    دانلود از مایکت
+                                </a>
+                            </li>                            
+                            <li>
+                                <a href="#" class="navbar__links-menu_download">
+                                    <img src="./static/img/menu/snapp-pwa.svg" alt="وب اپلیکیشن اسنپ" width="24" height="24">
+                                    وب اپلیکیشن اسنپ
+                                </a>
+                            </li>                            
+                            <li>
+                                <a href="#" class="navbar__links-menu_download">
+                                    <img src="./static/img/menu/apple.png" alt="دانلود از اپ استور" width="24" height="24">
+                                    دانلود از اپ استور
+                                </a>
+                            </li>                            
+
+                        </ul>
+
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -682,41 +740,7 @@
 
 
     <script src="./static/js/keen-slider.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Initialize Keen Slider
-          var slider = new KeenSlider("#snapp_slider", {
-              loop: true,
-              created: function (instance) {
-                  // Add event listeners to the dots
-                  var dots = document.querySelectorAll(".keen-dots .dot");
-                  dots.forEach(function (dot, idx) {
-                      dot.addEventListener("click", function () {
-                          instance.moveToIdx(idx); // Correct method to move to the slide corresponding to the dot index
-                      });
-                  });
-
-                  // Update the active dot on slider creation
-                  updateActiveDot(instance);
-              },
-              slideChanged: function (instance) {
-                  // Update the active dot when the slide changes
-                  updateActiveDot(instance);
-              }
-          });
-
-          // Function to update the active dot
-          function updateActiveDot(instance) {
-              var dots = document.querySelectorAll(".keen-dots .dot");
-              dots.forEach(function (dot, idx) {
-                  dot.classList.remove("active");
-                  if (idx === instance.track.details.rel) {
-                      dot.classList.add("active");
-                  }
-              });
-          }
-      });
-    </script>
+    <script src="./static/js/index.js"></script>
 </body>
 
 </html>
